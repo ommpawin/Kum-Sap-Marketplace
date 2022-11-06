@@ -42,3 +42,17 @@ $ fvm flutter run
 ```bash
 # Clean Xcode Cache
 pod ios/deintegrate && fvm flutter clean && rm -Rf ios/Pods && rm -Rf ios/Podfile.lock && rm -Rf ios/.symlinks && rm -Rf ios/Flutter/Flutter.framework && rm -Rf ios/Flutter/Flutter.podspec && rm -Rf ios/Podfile && rm -Rf build && rm -rf ~/Library/Developer/Xcode/DerivedData
+```
+
+## [!!! Important] Error Note
+
+### 1. Error The current Dart SDK version is... Log
+```bash
+Running "flutter pub get" in kum-sap-marketplace...
+The current Dart SDK version is 2.17.1.
+
+Because kumsap_marketplace requires SDK version >=2.18.1 <3.0.0, version solving failed.
+pub get failed (1; Because kumsap_marketplace requires SDK version >=2.18.1 <3.0.0, version solving failed.)
+Exited (1)
+```
+### Fix : Change environment -> SDK to ">=2.17.1 <3.0.0" or Clean project cache
